@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jCNoI86pBezrNKwFBpWMIqSSAVrG6+wBB+xuLuenKWI=",
+  "Source": "FloraAppWebAPI",
+  "BasePath": "_content/FloraAppWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

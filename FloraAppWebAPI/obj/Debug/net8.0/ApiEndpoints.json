@@ -1,0 +1,2453 @@
+[
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CartInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "AddItemToCart",
+    "RelativePath": "api/Cart/{cartId}/add-item",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "item",
+        "Type": "FloraApp.Model.Requests.CartItemInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "ClearCart",
+    "RelativePath": "api/Cart/{cartId}/clear",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "RemoveItemFromCart",
+    "RelativePath": "api/Cart/{cartId}/remove-item/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "GetCartTotal",
+    "RelativePath": "api/Cart/{cartId}/total",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Decimal",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "UpdateItemQuantity",
+    "RelativePath": "api/Cart/{cartId}/update-quantity/{productId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Cart/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CartUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Cart/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CartResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Cart/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartController",
+    "Method": "GetUserCart",
+    "RelativePath": "api/Cart/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/CartItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CartItemInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/CartItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/CartItem/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CartItemUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CartItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/CartItem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CartItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/CartItem/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartItemController",
+    "Method": "GetCartItems",
+    "RelativePath": "api/CartItem/cart/{cartId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.CartItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartItemController",
+    "Method": "GetCartItemByProduct",
+    "RelativePath": "api/CartItem/cart/{cartId}/product/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CartItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CartItemController",
+    "Method": "ItemExistsInCart",
+    "RelativePath": "api/CartItem/cart/{cartId}/product/{productId}/exists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CategorySearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/Category",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CategoryUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CategoryResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CategorySearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Category",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CategorySearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CategoryUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CategoryResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CategorySearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CategoryUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CategorySearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Category/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CategoryResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/Category/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.CategoryResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CustomBouquetSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/CustomBouquet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CustomBouquetUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CustomBouquetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CustomBouquetSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/CustomBouquet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CustomBouquetSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/CustomBouquet/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CustomBouquetUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CustomBouquetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CustomBouquetSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.CustomBouquetUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/CustomBouquet/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.CustomBouquetSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/CustomBouquet/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CustomBouquetResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CustomBouquetController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/CustomBouquet/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.CustomBouquetResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CustomBouquetItemController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/CustomBouquetItem/{itemId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CustomBouquetItemUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CustomBouquetItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CustomBouquetItemController",
+    "Method": "DeleteItem",
+    "RelativePath": "api/CustomBouquetItem/{itemId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CustomBouquetItemController",
+    "Method": "GetByBouquetId",
+    "RelativePath": "api/CustomBouquetItem/bouquet/{bouquetId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bouquetId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.CustomBouquetItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.CustomBouquetItemController",
+    "Method": "AddItem",
+    "RelativePath": "api/CustomBouquetItem/bouquet/{bouquetId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bouquetId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.CustomBouquetItemUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.CustomBouquetItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/Order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.OrderInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Order",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderStatus",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Order/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.OrderUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Order/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.OrderResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Order/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/OrderItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.OrderItemInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/OrderItem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OrderId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/OrderItem/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.OrderItemUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.OrderItemUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/OrderItem/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.OrderItemResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.OrderItemSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/OrderItem/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.OrderItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ProductSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ProductUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ProductResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ProductSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodeGTE",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MinPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "MaxPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ProductSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ProductUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ProductResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ProductSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ProductUpsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ProductResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ProductSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ProductResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/Reservation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ReservationInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Reservation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BudgetFrom",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BudgetTo",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ReservationUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetAllowedTransitions",
+    "RelativePath": "api/Reservation/{id}/allowed-transitions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Enums.ReservationStatus, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "UpdateReservationStatus",
+    "RelativePath": "api/Reservation/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraAppWebAPI.Controllers.UpdateStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetStatusDescription",
+    "RelativePath": "api/Reservation/{id}/status-description",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetReservationWithProposals",
+    "RelativePath": "api/Reservation/{id}/with-proposals",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetReservationsByDateRange",
+    "RelativePath": "api/Reservation/date-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "from",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetPendingReservations",
+    "RelativePath": "api/Reservation/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationController",
+    "Method": "GetUserReservations",
+    "RelativePath": "api/Reservation/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationProposalSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Insert",
+    "RelativePath": "api/ReservationProposal",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ReservationProposalInsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationProposalResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationProposalSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/ReservationProposal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ReservationId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SentAtFrom",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SentAtTo",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationProposalSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Update",
+    "RelativePath": "api/ReservationProposal/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.ReservationProposalUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationProposalResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseCrudController\u00604[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationProposalSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalInsertRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.Requests.ReservationProposalUpdateRequest, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/ReservationProposal/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.ReservationProposalSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/ReservationProposal/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationProposalResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationProposalController",
+    "Method": "UpdateProposalStatus",
+    "RelativePath": "api/ReservationProposal/{id}/status",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraAppWebAPI.Controllers.UpdateProposalStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.ReservationProposalResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationProposalController",
+    "Method": "GetActiveProposals",
+    "RelativePath": "api/ReservationProposal/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationProposalController",
+    "Method": "GetExpiredProposals",
+    "RelativePath": "api/ReservationProposal/expired",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.ReservationProposalController",
+    "Method": "GetProposalsForReservation",
+    "RelativePath": "api/ReservationProposal/reservation/{reservationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reservationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FloraApp.Model.Responses.ReservationProposalResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.UserUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.UserResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.UserSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FirstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "LastName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FTS",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Page",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncludeTotalCount",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "RetrieveAll",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.PagedResult\u00601[[FloraApp.Model.Responses.UserResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "FloraApp.Model.Requests.UserUpsertRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.BaseController\u00602[[FloraApp.Model.Responses.UserResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[FloraApp.Model.SearchObjects.UserSearchObject, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "GetById",
+    "RelativePath": "api/User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FloraApp.Model.Responses.UserResponse, FloraApp.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "GetUserByEmail",
+    "RelativePath": "api/User/email/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "CreateSimpleTestUser",
+    "RelativePath": "api/User/simple-test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "CreateTestUser",
+    "RelativePath": "api/User/test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.UserController",
+    "Method": "GetUserByUsername",
+    "RelativePath": "api/User/username/{username}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "FloraApp.Model.Responses.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FloraAppWebAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FloraAppWebAPI.WeatherForecast, FloraAppWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

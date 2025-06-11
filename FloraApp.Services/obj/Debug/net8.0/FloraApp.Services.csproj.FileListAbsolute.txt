@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.AssemblyInfo.cs
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Services.deps.json
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Services.runtimeconfig.json
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Services.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Services.pdb
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Model.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\bin\Debug\net8.0\FloraApp.Model.pdb
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.1EAF7BBE.Up2Date
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\refint\FloraApp.Services.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.pdb
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.genruntimeconfig.cache
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\ref\FloraApp.Services.dll
