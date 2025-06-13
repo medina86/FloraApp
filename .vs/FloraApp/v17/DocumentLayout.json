@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraappwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|solutionrelative:floraappwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraappwebapi\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|solutionrelative:floraappwebapi\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraappwebapi\\controllers\\blogcommentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67B052D5-9203-45DF-81D7-30BFAFAAC597}|FloraAppWebAPI\\FloraAppWebAPI.csproj|solutionrelative:floraappwebapi\\controllers\\blogcommentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraapp.services\\services\\blogcommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|solutionrelative:floraapp.services\\services\\blogcommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraapp.services\\services\\blogpostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|solutionrelative:floraapp.services\\services\\blogpostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|c:\\users\\user\\desktop\\floraapp rs2\\floraapp\\floraapp.services\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8105AC55-2DF0-495C-B1E7-D1A2F419F9D4}|FloraApp.Services\\FloraApp.Services.csproj|solutionrelative:floraapp.services\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,15 +43,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "FloraAppWebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Program.cs",
+              "RelativeToolTip": "FloraAppWebAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:17:23.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BlogPostController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Controllers\\BlogPostController.cs",
+              "RelativeDocumentMoniker": "FloraAppWebAPI\\Controllers\\BlogPostController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Controllers\\BlogPostController.cs",
+              "RelativeToolTip": "FloraAppWebAPI\\Controllers\\BlogPostController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T09:43:13.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BlogCommentController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Controllers\\BlogCommentController.cs",
+              "RelativeDocumentMoniker": "FloraAppWebAPI\\Controllers\\BlogCommentController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraAppWebAPI\\Controllers\\BlogCommentController.cs",
+              "RelativeToolTip": "FloraAppWebAPI\\Controllers\\BlogCommentController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T09:43:10.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogPostService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\BlogPostService.cs",
+              "RelativeDocumentMoniker": "FloraApp.Services\\Services\\BlogPostService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\BlogPostService.cs",
+              "RelativeToolTip": "FloraApp.Services\\Services\\BlogPostService.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAwwIYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T09:42:23.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogCommentService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\BlogCommentService.cs",
+              "RelativeDocumentMoniker": "FloraApp.Services\\Services\\BlogCommentService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\BlogCommentService.cs",
+              "RelativeToolTip": "FloraApp.Services\\Services\\BlogCommentService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAwwIAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T09:42:22.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ReservationService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\ReservationService.cs",
               "RelativeDocumentMoniker": "FloraApp.Services\\Services\\ReservationService.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\FloraApp RS2\\FloraApp\\FloraApp.Services\\Services\\ReservationService.cs",
               "RelativeToolTip": "FloraApp.Services\\Services\\ReservationService.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwCcAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T19:44:23.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T19:44:23.021Z"
             }
           ]
         }

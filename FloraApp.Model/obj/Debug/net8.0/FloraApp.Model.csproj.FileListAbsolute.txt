@@ -10,3 +10,4 @@ C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Model\obj\Debug\net8.0\Flor
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Model\obj\Debug\net8.0\refint\FloraApp.Model.dll
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Model\obj\Debug\net8.0\FloraApp.Model.pdb
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Model\obj\Debug\net8.0\ref\FloraApp.Model.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Model\obj\Debug\net8.0\FloraApp.Model.sourcelink.json

@@ -147,14 +147,12 @@ namespace FloraApp.Services.Services
         {
             var response = _mapper.Map<ReservationResponse>(entity);
             
-            // Map user information
             if (entity.User != null)
             {
                 response.UserName = $"{entity.User.FirstName} {entity.User.LastName}";
                 response.UserEmail = entity.User.Email;
             }
 
-            // Map proposals
             if (entity.Proposals != null)
             {
                 response.Proposals = entity.Proposals.Select(p => new ReservationProposalResponse

@@ -185,4 +185,5 @@ C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\refi
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\FloraAppWebAPI.pdb
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\FloraAppWebAPI.genruntimeconfig.cache
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\ref\FloraAppWebAPI.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\FloraAppWebAPI.sourcelink.json
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraAppWebAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

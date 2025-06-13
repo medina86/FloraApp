@@ -637,7 +637,7 @@ namespace FloraApp.Services.Migrations
             modelBuilder.Entity("FloraApp.Services.Database.BlogComment", b =>
                 {
                     b.HasOne("FloraApp.Services.Database.BlogPost", "BlogPost")
-                        .WithMany()
+                        .WithMany("BlogComments")
                         .HasForeignKey("BlogPostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -819,6 +819,11 @@ namespace FloraApp.Services.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("FloraApp.Services.Database.BlogPost", b =>
+                {
+                    b.Navigation("BlogComments");
                 });
 
             modelBuilder.Entity("FloraApp.Services.Database.Cart", b =>

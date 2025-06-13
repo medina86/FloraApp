@@ -107,6 +107,19 @@ namespace FloraApp.Services.Database
                 .WithMany(p => p.CustomBouquetItems)
                 .HasForeignKey(cbi => cbi.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
+                
+            // BlogPost and BlogComment
+            modelBuilder.Entity<BlogPost>()
+                .HasMany(bp => bp.BlogComments)
+                .WithOne(bc => bc.BlogPost)
+                .HasForeignKey(bc => bc.BlogPostId)
+                .OnDelete(DeleteBehavior.Cascade);
+                
+            modelBuilder.Entity<BlogComment>()
+                .HasOne(bc => bc.User)
+                .WithMany()
+                .HasForeignKey(bc => bc.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 } 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace FloraApp.Services.Database
@@ -19,5 +20,8 @@ namespace FloraApp.Services.Database
         
         [Required]
         public DateTime CreatedAt { get; set; }
+        
+        // Navigation properties
+        public virtual ICollection<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
     }
 } 

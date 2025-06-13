@@ -19,6 +19,11 @@ namespace FloraApp.Services.Mapping
             
             TypeAdapterConfig<CustomBouquet, CustomBouquetResponse>.NewConfig();
             
+            // Blog mappings
+            TypeAdapterConfig<BlogPost, BlogPostResponse>.NewConfig();
+            
+            TypeAdapterConfig<BlogComment, BlogCommentResponse>.NewConfig();
+            
             // Request to Entity mappings
             TypeAdapterConfig<CategoryUpsertRequest, Category>.NewConfig();
             
@@ -29,6 +34,13 @@ namespace FloraApp.Services.Mapping
                 .Ignore(dest => dest.PasswordSalt);
 
             TypeAdapterConfig<CustomBouquetUpsertRequest, CustomBouquet>.NewConfig()
+                .Ignore(dest => dest.CreatedAt);
+                
+            // Blog request mappings
+            TypeAdapterConfig<BlogPostUpsertRequest, BlogPost>.NewConfig()
+                .Ignore(dest => dest.CreatedAt);
+                
+            TypeAdapterConfig<BlogCommentUpsertRequest, BlogComment>.NewConfig()
                 .Ignore(dest => dest.CreatedAt);
         }
     }

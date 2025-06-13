@@ -15,3 +15,4 @@ C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\r
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.pdb
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.genruntimeconfig.cache
 C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\ref\FloraApp.Services.dll
+C:\Users\User\Desktop\FloraApp RS2\FloraApp\FloraApp.Services\obj\Debug\net8.0\FloraApp.Services.sourcelink.json
